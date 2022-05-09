@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>TelerikWpfApp1</RootNamespace>
+    <EnableDefaultItems>False</EnableDefaultItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Telerik.UI.for.Wpf.60.Xaml" Version="2022.1.222" />
+  </ItemGroup>
+  
+  <ItemGroup>
+  <ApplicationDefinition Include="App.xaml">
+    <Generator>MSBuild:Compile</Generator>
+    <SubType>Designer</SubType>
+  </ApplicationDefinition>
+  <Page Include="ChoiceForm.xaml">
+    <Generator>MSBuild:Compile</Generator>
+  </Page>
+  <Page Include="Controls\RefInput.xaml">
+    <Generator>MSBuild:Compile</Generator>
+  </Page>
+  <Page Include="Controls\RefInputField.xaml">
+    <Generator>MSBuild:Compile</Generator>
+  </Page>
+  <Page Include="Window1.xaml">
+    <Generator>MSBuild:Compile</Generator>
+  </Page>
+  <Compile Include="Adapter.cs" />
+  <Compile Include="App.xaml.cs">
+    <DependentUpon>App.xaml</DependentUpon>
+    <SubType>Code</SubType>
+  </Compile>
+  <Compile Include="ChoiceForm.xaml.cs" />
+  <Compile Include="Connector.cs" />
+  <Compile Include="Controls\RefInput.xaml.cs" />
+  <Compile Include="Controls\RefInputField.xaml.cs" />
+  <Compile Include="TabularSection.cs" />
+  <Compile Include="Model\Catalogs\CatalogRef.cs" />
+  <Compile Include="Model\Documents\DocumentObject.cs" />
+  <Compile Include="Model\Documents\DocumentObject_RetailSales.cs" />
+  <Compile Include="Model\Catalogs\DynamicList.cs" />
+  <Compile Include="Model\RemoteCollection.cs" />
+  <Compile Include="Model\RemoteObject.cs" />
+  <Compile Include="Window1.xaml.cs" />
+</ItemGroup>
+  
+
+  <ItemGroup>
+	<Resource Include="icons\Payment.png" />
+	<Resource Include="icons\Price.png" />
+    <Resource Include="icons\Quantity.png" />
+    <Resource Include="icons\SpecialOffer.png" />
+    <Resource Include="icons\Total.png" />
+	<Resource Include="icons\SerialNumber.png" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Resource Include="images\goods.jpg" />
+  </ItemGroup>
+
+</Project>

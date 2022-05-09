@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="TelerikWpfApp1.Controls.RefInput"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:TelerikWpfApp1.Controls"
+             mc:Ignorable="d" 
+             x:Name="ref_input"
+             d:DesignHeight="22" d:DesignWidth="200">
+    <Grid>
+        <TextBox
+            x:Name="textBox"
+            Grid.Row="3"
+            Text="{Binding ElementName=ref_input, Path=PathToProperty}"
+            VerticalContentAlignment="Center"/>
+        <telerik:RadButton
+            x:Name="choiceButton"
+            Grid.Row="3"
+            HorizontalAlignment="Right"
+            Width="22"
+            Content="..."
+            Click="choiceButton_Click"/>
+    </Grid>
+</UserControl>

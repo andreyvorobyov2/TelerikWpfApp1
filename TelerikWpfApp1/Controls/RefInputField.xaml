@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="TelerikWpfApp1.Controls.RefInputField"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:TelerikWpfApp1.Controls"
+             mc:Ignorable="d" 
+             x:Name="ref_input_field"
+             d:DesignHeight="44" d:DesignWidth="200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22"/>
+            <RowDefinition Height="22"/>
+        </Grid.RowDefinitions>
+        <telerik:Label 
+            x:Name="captionLabel"
+            Grid.Row="0"
+            Content="{Binding ElementName=ref_input_field, Path=Caption}"
+            VerticalContentAlignment="Bottom"/>
+        <local:RefInput
+            x:Name="refInput"
+            PathToProperty="{Binding ElementName=ref_input_field, Path=PathToProperty}"
+            Grid.Row="2"/>
+        <!--
+        <TextBox
+            x:Name="textBox"
+            Grid.Row="3"
+            Text="{Binding ElementName=ref_input_field, Path=PathToProperty}"
+            VerticalContentAlignment="Center"/>
+        <telerik:RadButton
+            x:Name="choiceButton"
+            Grid.Row="3"
+            HorizontalAlignment="Right"
+            Width="22"
+            Content="..."
+            Click="choiceButton_Click"/>
+        -->
+    </Grid>
+</UserControl>
